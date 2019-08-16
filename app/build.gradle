@@ -50,6 +50,7 @@ dependencies {
 
     // MATERIAL_DESIGN
     implementation "androidx.appcompat:appcompat:$APPCOMPATX_VERSION"
+    implementation "com.google.android.material:material:$MATERIAL_VERSION"
     implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINX_VERSION"
 
     // KOTLIN
@@ -57,6 +58,6 @@ dependencies {
     implementation "androidx.core:core-ktx:$CORE_KTX_VERSION"
 
     // LIBRARYS
-    implementation project(path: ':biometric_authentication')
-    //implementation 'mx.com.enterprises.biometric_authentication:biometric_authentication:0.0.1'
+    //implementation project(path: ':biometric_authentication')
+    implementation 'mx.com.enterprises.biometric_authentication:biometric_authentication:0.0.3'
 }

@@ -23,7 +23,7 @@ ext {
     siteUrl = 'https://github.com/Devare/biometric.git'
     gitUrl = 'https://github.com/Devare/biometric.git'
 
-    libraryVersion = '0.0.2'
+    libraryVersion = '0.0.3'
 
     developerId = 'jafh'
     developerName = 'jafh'
