@@ -1,3 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">biometric_authentication</string>
+
+    <!-- ********************************************************************************************************** -->
+    <!--                    BiometricManagerV23.kt                                                                  -->
+    <!-- ********************************************************************************************************** -->
+    <string name="biometric_failed">Huella digital no reconocida</string>
+    <string name="biometric_status_success">Huella verificada</string>
+
+    <!-- ********************************************************************************************************** -->
+    <!--                   view_bottom_sheet.xml                                                                    -->
+    <!-- ********************************************************************************************************** -->
+    <string name="lorem_input">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto</string>
+
+    <!-- ********************************************************************************************************** -->
+    <!--                  BiometricDialogV23.kt                                                                     -->
+    <!-- ********************************************************************************************************** -->
+    <string name="biometric_negative_button_text">CANCELAR</string>
+
+
+    <!-- ********************************************************************************************************** -->
+    <!--                     internals errors                                                                       -->
+    <!-- ********************************************************************************************************** -->
+    <string name="text_info_internal_error_btn_negative">Debes agregar un nombre para el boton de cancelación</string>
+
 </resources>

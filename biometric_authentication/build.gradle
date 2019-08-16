@@ -3,6 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
 ext {
 
     bintrayRepo = "biometric_authentication"
@@ -14,14 +20,14 @@ ext {
 
     libraryDescription = 'Biometric es una librería que  ayuda  a la autenticación con huella digital con un diseño personalizado para dispositivos que lo soportan'
 
-    siteUrl = 'https://github.com/wajahatkarim3/MediumClap-Android'
-    gitUrl = 'https://github.com/wajahatkarim3/MediumClap-Android.git'
+    siteUrl = 'https://github.com/Devare/biometric.git'
+    gitUrl = 'https://github.com/Devare/biometric.git'
 
     libraryVersion = '0.0.1'
 
-    developerId = 'wajahatkarim3'
-    developerName = 'Wajahat Karim'
-    developerEmail = 'wajahatkarim3@gmail.com'
+    developerId = 'jafh'
+    developerName = 'jafh'
+    developerEmail = 'ing_angelfierro@hotmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -30,16 +36,14 @@ ext {
 
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.1"
 
+    compileSdkVersion COMPILE_SDK_VERSION
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
@@ -51,6 +55,20 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
 }
 
 repositories {
@@ -60,10 +78,17 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    // TESTING
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation "androidx.test:runner:$RUNNERX_VERSION"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$EXPRESSOX_VERSION"
+
+    // MATERIAL_DESIGN
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINX_VERSION"
+    implementation "com.google.android.material:material:$MATERIAL_VERSION"
+
+    // KOTLIN
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
 if (project.rootProject.file('local.properties').exists()) {

@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="16dp"
         tools:context=".example.MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/label_txt_autenticate_four_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_autenticate_four_params"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_authenticate_four_params"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:text="@string/btn_authenticate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_autenticate_four_params"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/label_txt_autenticate_three_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_autenticate_three_params"
+            app:layout_constraintTop_toBottomOf="@+id/btn_authenticate_four_params"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_authenticate_three_params"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_authenticate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_autenticate_three_params"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/label_txt_autenticate_two_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_autenticate_two_params"
+            app:layout_constraintTop_toBottomOf="@+id/btn_authenticate_three_params"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_authenticate_two_params"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_authenticate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_autenticate_two_params"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/label_txt_autenticate_title_require"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_autenticate_title_require"
+            app:layout_constraintTop_toBottomOf="@+id/btn_authenticate_two_params"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_authenticate_title_require"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_authenticate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_autenticate_title_require"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

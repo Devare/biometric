@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Biometric</string>
+
+    <string name="btn_authenticate">Login</string>
+
+    <string name="biometric_title">Ingresa a Biometric</string>
+    <string name="biometric_subtitle">Coloca tu huella en el sensor</string>
+    <string name="biometric_description">Coloque el dedo en el botón de inicio del dispositivo para verificar su identidad</string>
+    <string name="biometric_negative_button_text">USAR CONTRASEÑA</string>
+
+
+    <string name="biometric_error_sdk_not_supported">La versión SDK no es compatible</string>
+    <string name="biometric_error_hardware_not_supported">El dispositivo no es compatible con la autenticación biométrica.</string>
+    <string name="biometric_error_fingerprint_not_available">La huella dactilar no está registrada en el dispositivo</string>
+    <string name="biometric_error_permission_not_granted">El permiso no es otorgado por el usuario</string>
+    <string name="biometric_failure">Login no exitoso!</string>
+    <string name="biometric_cancelled">Autentificación cancelada por el usuario.</string>
+    <string name="biometric_success">Inicio de sesión correcto</string>
+
+    <!--MainActivit.kt-->
+    <string name="label_txt_autenticate_four_params"><b>Autenticación con 4 parametros:</b>\n1.- Titulo\n2.-Subtitulo\n3.- Descripción\n4.-Con botón de cancelar</string>
+    <string name="label_txt_autenticate_three_params"><b>Autenticación con 3 parametros:</b>\n1.- Titulo\n2.-Subtitulo\n3.-Con botón de cancelar</string>
+    <string name="label_txt_autenticate_two_params"><b>Autenticación con 2 parametros:</b>\n1.- Titulo\n2.-Con botón de cancelar</string>
+    <string name="label_txt_autenticate_title_require"><b>El titulo es requerido</b>\n</string>
 </resources>
