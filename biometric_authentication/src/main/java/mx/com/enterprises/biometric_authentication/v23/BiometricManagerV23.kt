@@ -47,7 +47,7 @@ open class BiometricManagerV23 {
 
     companion object {
         private val KEY_NAME = UUID.randomUUID().toString()
-        private val DELAY = 520
+        val DELAY = 520
     }
 
 

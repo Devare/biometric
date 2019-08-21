@@ -1,5 +1,6 @@
 package mx.com.enterprises.biometric_authentication.v23
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.view.View
@@ -42,6 +43,7 @@ class BiometricDialogV23 : BottomSheetDialog, View.OnClickListener {
     ) : super(context, cancelable, cancelListener) {
     }
 
+    @SuppressLint("InflateParams")
     private fun setDialogView() {
         val bottomSheetView = layoutInflater.inflate(R.layout.view_bottom_sheet, null)
         setContentView(bottomSheetView)
@@ -93,20 +95,18 @@ class BiometricDialogV23 : BottomSheetDialog, View.OnClickListener {
     }
 
     private fun updateLogo() = try {
-        val drawable = getContext().packageManager.getApplicationIcon(context.packageName)
+        val drawable = context.packageManager.getApplicationIcon(context.packageName)
         img_logo!!.setImageDrawable(drawable)
 
     } catch (e: Exception) {
         e.printStackTrace()
     }
 
-
     override fun onClick(view: View) {
         dismiss()
         biometricCallback.onAuthenticationCancelled()
     }
 
-    fun getApplicationName(): String {
-        return context.applicationInfo.loadLabel(context.packageManager).toString()
-    }
+    private fun getApplicationName(): String = this.context.applicationInfo.loadLabel(context.packageManager).toString()
+
 }

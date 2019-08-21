@@ -19,9 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            url  "https://dl.bintray.com/jafh/biometric_authentication"
-        }
+        maven { url  "https://dl.bintray.com/jafh/biometric_authentication" }
     }
 }
 
@@ -37,7 +35,7 @@ ext {
     MIN_SDK_VERSION = 19
     TARGET_SDK_VERSION = 29
     VERSION_CODE = 2
-    VERSION_NAME = "0.0.3 "
+    VERSION_NAME = "0.0.3"
 
     // TEST UNIT
     RUNNERX_VERSION = '1.2.0'

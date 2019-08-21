@@ -17,7 +17,7 @@ import mx.com.enterprises.biometric_authentication.v28.BiometricCallbackV28
  * @since 1
  */
 
-class BiometricManager(biometricBuilder: BiometricBuilder) : BiometricManagerV23() {
+open class BiometricManager(biometricBuilder: BiometricBuilder) : BiometricManagerV23() {
 
 
     protected var mCancellationSignal = CancellationSignal()
@@ -79,15 +79,22 @@ class BiometricManager(biometricBuilder: BiometricBuilder) : BiometricManagerV23
             biometricPrompt.setDescription(description!!)
         }
 
-        biometricPrompt.setNegativeButton(
-            negativeButtonText!!,
-            executor, object : DialogInterface.OnClickListener {
-                override fun onClick(dialog: DialogInterface?, which: Int) {
-                    biometricCallback.onAuthenticationCancelled()
-                }
-            })
-            .build()
-            .authenticate(mCancellationSignal, executor, BiometricCallbackV28(biometricCallback))
+        biometricPrompt.run {
+
+            if (!subtitle.isNullOrEmpty()) {
+                biometricPrompt.setSubtitle(subtitle!!)
+            }
+            if (!description.isNullOrEmpty()) {
+                biometricPrompt.setDescription(description!!)
+            }
+
+            setNegativeButton(
+                negativeButtonText!!,
+                executor,
+                DialogInterface.OnClickListener { dialog, which -> biometricCallback.onAuthenticationCancelled() })
+                .build()
+                .authenticate(mCancellationSignal, executor, BiometricCallbackV28(biometricCallback))
+        }
     }
 
     fun cancelAuthentication() {
